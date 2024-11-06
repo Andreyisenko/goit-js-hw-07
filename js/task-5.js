@@ -21,7 +21,7 @@ btn.style.fontWeight = '500';
 btn.style.fontSize = '16px';
 
 btn.addEventListener('click', () => {
-const colorRandom = getRandomHexColor()
+  const colorRandom = getRandomHexColor();
   bodY.style.backgroundColor = colorRandom;
   spaN.textContent = colorRandom;
 });
