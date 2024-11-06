@@ -34,6 +34,6 @@ formA1.addEventListener('submit', event => {
   if ('' === userPassword.trim() || userEmail.trim() === '') {
     alert('All form fields must be filled in');
   }
-  console.log(`{email: ${userEmail.trim()}, password: ${userPassword.trim()}}`);
   formA1.reset();
+  console.log(`{email: ${userEmail.trim()}, password: ${userPassword.trim()}}`);
 });

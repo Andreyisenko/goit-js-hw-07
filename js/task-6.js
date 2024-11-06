@@ -25,25 +25,22 @@ function createBoxes(amount) {
   divBox.innerHTML = '';
   inputNumb.value = '';
   size = 30;
-  const arr = [];
+  const arrDiv = document.createDocumentFragment();
   for (let index = 0; index < amount; index++) {
     const myBox = document.createElement('div');
     myBox.style.width = `${size}px`;
     myBox.style.height = `${size}px`;
     myBox.style.backgroundColor = getRandomHexColor();
-    arr.push(myBox);
     size += 10;
+    arrDiv.append(myBox);
+    // console.log(arrDiv);
   }
 
-  divBox.append(...arr);
-
-  console.log(inputNumb.value);
+  divBox.append(arrDiv);
 }
 
 btnDestroy.addEventListener('click', destroyBoxes);
 
 function destroyBoxes() {
   divBox.innerHTML = '';
-   
-
 }

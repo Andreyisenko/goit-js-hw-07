@@ -21,10 +21,7 @@ btn.style.fontWeight = '500';
 btn.style.fontSize = '16px';
 
 btn.addEventListener('click', () => {
-  bodY.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-  spaN.textContent = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
+const colorRandom = getRandomHexColor()
+  bodY.style.backgroundColor = colorRandom;
+  spaN.textContent = colorRandom;
 });
